@@ -39,7 +39,7 @@ def replace_text_in_pdf(input_pdf_path, output_pdf_path, search_text, replace_te
                 myfont = "C:/Windows/Fonts/consolab.ttf"
             page.apply_redactions(images=fitz.PDF_REDACT_IMAGE_NONE)  # Nie zmieniaj obrazów
             page.insert_font(fontname="F0", fontfile=myfont)
-            rect = fitz.Rect(x1, y1, 300, 200)  # Prostokąt
+            rect = fitz.Rect(x1, y1, page.mediabox.width, page.mediabox.height)  # Prostokąt
             page.insert_textbox(rect, nowytekst, fontname="F0", fontsize=font_size)
     # Zapisz zmieniony plik PDF
     document.save(output_pdf_path, garbage=3, deflate=True)

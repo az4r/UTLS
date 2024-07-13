@@ -39,4 +39,3 @@ def replace_text_in_pdf(input_pdf_path, output_pdf_path, search_text, replace_te
     document.save(output_pdf_path, garbage=3, deflate=True)
 
 replace_text_in_pdf(input_pdf_path, output_pdf_path, old_text, cleaner)
-input("\nNacisnij enter aby kontynuowac...")

@@ -7,7 +7,7 @@ if not "%1" == "min" start /MIN cmd /c %0 min & exit/b >nul 2>&1
 date 24-12-2023
 
 :a
-time 06:60:00
+time 06:30:00
 cscript /nologo /e:JScript "%~f0" 250
 goto a
 

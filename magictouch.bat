@@ -1,1 +1,2 @@
-copy /b *.* +,,
+copy /b *.dwg +,,
+copy /b *.pdf +,,

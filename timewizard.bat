@@ -1,9 +1,15 @@
+@if (@CodeSection == @Batch) @then
 @echo off
+setlocal
 
 if not "%1" == "min" start /MIN cmd /c %0 min & exit/b >nul 2>&1
 
-:a
 date 24-12-2023
-time 06:30:00
-ping 1.1.1.1 -n 2 -w 400 >nul
+
+:a
+time 06:60:00
+cscript /nologo /e:JScript "%~f0" 250
 goto a
+
+@end
+WSH.Sleep(WSH.Arguments(0));
